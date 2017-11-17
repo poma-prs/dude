@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/DTD/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="ru-ru">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <title>Чувачок по экрану</title>
+    <script  type="text/javascript">
+     <!--
+     var a = -200;
+     function rightover()
+     {
+       rover = setTimeout(function () {rightover()}, 1);
+       if (a<-30) {a = a + 1; document.getElementById("right").style.right = a +"px"; clearTimeout(rout);} 
+     }
+     function rightout()
+     { 
+      rout = setTimeout(function () {rightout()}, 1);
+      if (a>-200) {a = a - 1; document.getElementById("right").style.right = a +"px"; clearTimeout(rover);} 
+     }
+
+     function onScreen(l)
+     {
+      var str = document.getElementById("screen").src; 
+      var num = parseInt(str.substr(str.length-5), 10);
+      if (!l) 
+      {      
+       if (num == 1) {num = 5;}       
+       document.getElementById("screen").src = "images/screen/" + (num-1) + ".png";
+      }
+      if (l) 
+      {     
+       if (num == 4) {num = 0;}       
+       document.getElementById("screen").src = "images/screen/" + (num+1) + ".png";
+      }
+     }
+     function ScreenRandom(max, min)
+     { 
+      var rand = Math.floor(Math.random() * (max - min + 1)) + min;
+      document.getElementById("screen").src = "images/screen/" + rand + ".png";      
+     }
+     function DocLoad()
+     { 
+      setInterval(function () {ScreenRandom(4, 1)}, 5000);
+     }
+     function ScreenWorkspace()
+	 {
+      if(window.innerWidth)
+	  {
+       width = window.innerWidth;
+       height = window.innerHeight;
+      }  
+	  else if(document.documentElement && document.documentElement.clientWidth)
+	  {
+       width = document.documentElement.clientWidth;
+       height = document.documentElement.clientHeight;
+      }    
+	  else if(document.body && document.body.clientWidth)
+	  {
+       width = document.body.clientWidth;
+       height = document.body.clientHeight;
+      }
+      alert(width+' * '+height);
+     }
+     -->
+    </script>
+</head>
+<body onload="DocLoad()">
+ <div class="stalin"><img src="images/stalin.png" width="165px" height="362px"></div>
+ <div class="lenin"><img src="images/lenin.png" width="154px" height="282px"></div>
+ <div class="dialog1"><img src="images/dialog/1.png" width="224px" height="148px"></div>
+ <div class="dialog2"><a href="#"><img src="images/dialog/2.png" width="300px" height="150px"></a></div>
+ <div class="bgorange"></div>
+ <div class="bgred"></div>
+
+ <div class="container">
+  <div class="top-dude"><img src="images/dude.png" width="100px" height="100px" alt="dude"></div> 
+  <table cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr>
+    <td height="127px" class="main-top">
+     <table class="menu_padding" width="750px" height="45px" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tr>
+       <td width="150px"><a href="#"><img class="menu" src="images/menu_item1.png" width="150px" height="45px" alt="Главная"></a><center><img class="menu" src="images/arrow.png" width="32px" height="32px" alt="up"></center></td>
+       <td width="150px"><a href="download.html"><img class="menu" src="images/menu_item2.png" width="150px" height="45px" alt="Download"></a></td>
+       <td width="150px"></td>
+       <td width="150px"></td>
+       <td width="150px"><a href="#"><img class="menu" src="images/menu_item3.png" width="150px" height="45px" alt="ЧЁ?!"></a></td>
+      </tr>
+     </table> 
+    </td>
+   </tr>
+   <tr>
+    <td class="main-center" style="min-height: 900px;" valign="top">
+     <div class="body">
+      <center><img src="images/hr-main.png" width="820px" height="7px"></center><br>
+      <table width="820px" height="200px" border="0" align="center">
+       <tr>
+        <td width="103px"><center><a href="#"><img onclick="onScreen(false)" onmouseover="this.src='images/onleftlink.png';" onmouseout="this.src='images/onleft.png';" src="images/onleft.png" alt="onleft" width="40" height="34" border="0"></a></center></td>
+        <td width="614px"><img id="screen" src="images/screen/1.png" alt="screen" width="614px" height="268px" border="1"></td>
+        <td width="103px"><center><a href="#"><img onclick="onScreen(true)" onmouseover="this.src='images/onrightlink.png';" onmouseout="this.src='images/onright.png';" src="images/onright.png" alt="onright" width="40" height="34" border="0"></a></center></td>
+       </tr>
+      </table>
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <td class="main-bottom">
+    </td>
+   </tr>
+  </table>
+ </div>
+
+ <div class="right" id="right">
+  <table>
+   <tr>
+    <td><a href="http://school5.dyndns.biz/" target="_blank"><img border="0" class="menu_padding" onmouseover="rightover()" onmouseout="rightout()" src="images/right-school.png" width="250px" height="159px" alt="school5"></a></td>
+   </tr>
+  </table>
+ </div>
+</body>
+</html>

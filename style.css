@@ -1,0 +1,109 @@
+body
+{
+    background-image: url('images/bgline.png');
+}
+div.body
+{
+    margin: 10px 10px 20px 10px;
+    min-height: 450px;
+}
+div.container
+{
+    width: 900px;
+    margin: 45px auto 30px auto;
+    min-height: 600px;
+}
+td.main-top
+{
+    background-image: url('images/top.png');
+    background-repeat: no-repeat;
+    width: 862px;
+    height: 100px;
+}
+td.main-center 
+{
+    background-image: url('images/center.png');
+    background-repeat: repeat-y;
+    min-height: 900px;
+}
+td.main-bottom
+{
+    background-image: url('images/bottom.png');
+    background-repeat: no-repeat;
+    height: 23px;
+}
+div.stalin
+{
+    position: fixed;
+    bottom: 0px;
+    left: 20px;
+}
+div.lenin
+{
+    right: 20px;
+    position: fixed;
+    bottom: 0px;
+}
+div.dialog1
+{
+    left: 30px;
+    bottom: 400px;
+    position: fixed;
+}
+div.dialog2
+{
+    position: fixed;
+    right: -70px;
+    bottom: 350px;
+}
+div.top-dude
+{
+    position: absolute;
+    top: 0px;
+}
+table.menu_padding
+{
+    margin-top: 20px;
+}
+img.menu
+{
+    border: none;
+}
+div.bgorange
+{
+    background-image: url('images/bgorange.png');
+    background-repeat: repeat-x;
+    background-position: top;
+    width: 100%;
+    height: 10px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+div.bgred
+{
+    background-position: bottom;
+    background-image: url('images/bgred.png');
+    background-repeat: repeat-x;
+    position: fixed;
+    width: 100%;
+    height: 6px;
+    bottom: 0px;
+    right: 0px;
+}
+div.main-hr
+{
+    background-image: url('images/hr-main.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    margin-bottom: 30px;
+}
+div.right
+{
+    position: fixed;
+    right: -200px;
+    top: 10px;
+}

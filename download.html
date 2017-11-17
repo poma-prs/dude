@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/DTD/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="ru-ru">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <title>Чувачок по экрану</title>
+    <script  type="text/javascript">
+     <!--
+     var a = -200;
+     var opacityDownload = 100;
+     function rightover()
+     {
+       rover = setTimeout(function () {rightover()}, 1);
+       if (a<-30) {a = a + 1; document.getElementById("right").style.right = a +"px"; clearTimeout(rout);} 
+     }
+     function rightout()
+     { 
+      rout = setTimeout(function () {rightout()}, 1);
+      if (a>-200) {a = a - 1; document.getElementById("right").style.right = a +"px"; clearTimeout(rover);} 
+     }
+     function downlink()
+     {
+      document.getElementById("download").style.opacity = "0." + opacityDownload;
+      opacityDownload += 1;
+      if (opacityDownload <1000) {setTimeout(function () {downlink()}, 100);}
+     }
+     -->
+    </script>
+</head>
+<body onload="setTimeout(function () {downlink()}, 5000)">
+ <div class="stalin"><img src="images/stalin.png" width="165px" height="362px"></div>
+ <div class="lenin"><img src="images/lenin.png" width="154px" height="282px"></div>
+ <div class="dialog1"><img src="images/dialog/1.png" width="224px" height="148px"></div>
+ <div class="bgorange"></div>
+ <div class="bgred"></div>
+
+ <div class="container">
+  <div class="top-dude"><img src="images/dude.png" width="100px" height="100px" alt="dude"></div> 
+  <table cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr>
+    <td height="127px" class="main-top">
+     <table class="menu_padding" width="750px" height="45px" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tr>
+       <td width="150px"><a href="main.html"><img class="menu" src="images/menu_item1.png" width="150px" height="45px" alt="Главная"></a></td>
+       <td width="150px"><a href="#"><img class="menu" src="images/menu_item2.png" width="150px" height="45px" alt="Download"></a><center><img class="menu" src="images/arrow.png" width="32px" height="32px" alt="up"></center></td>
+       <td width="150px"></td>
+       <td width="150px"></td>
+       <td width="150px"><a href="#"><img class="menu" src="images/menu_item3.png" width="150px" height="45px" alt="ЧЁ?!"></a></td>
+      </tr>
+     </table> 
+    </td>
+   </tr>
+   <tr>
+    <td class="main-center" style="min-height: 900px;" valign="top">
+     <div class="body">
+      <center><img src="images/hr-main.png" width="820px" height="7px">
+      <h3 id="download" style="opacity: 0.0;"><a href="download/Dude.exe">Скачать программку</a></h3>
+      <object width="800" height="500">
+       <param name="movie" value="swf/down.swf">
+       <embed src="swf/down.swf" width="800" height="500">
+       </embed>
+      </object></center>
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <td class="main-bottom">
+    </td>
+   </tr>
+  </table>
+ </div>
+
+ <div class="right" id="right">
+  <table>
+   <tr>
+    <td><a href="http://school5.dyndns.biz/" target="_blank"><img border="0" class="menu_padding" onmouseover="rightover()" onmouseout="rightout()" src="images/right-school.png" width="250px" height="159px" alt="school5"></a></td>
+   </tr>
+  </table>
+ </div>
+</body>
+</html>
